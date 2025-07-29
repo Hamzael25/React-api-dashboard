@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import PokemonCard from "./PokemonCard"
 
 
 const Pokedex = () => {
@@ -20,7 +21,7 @@ return (
     </h1>
     <ul>
       {pokemons.map((pokemon, index) => (
-        <li key={index}>{pokemon.name}</li>
+        <div key={index}>{<PokemonCard pokemon={pokemon} />}</div>
       ))}
     </ul>
   </div>
