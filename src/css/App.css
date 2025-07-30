@@ -38,3 +38,7 @@ nav a {
 nav a:hover {
   color: black;
 }
+
+a {
+  color: black;
+}

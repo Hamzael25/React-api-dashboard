@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import { Link } from "react-router-dom";
 import "../css/PokemonCard.css"
 
 const PokemonCard = ({pokemon}) => {
@@ -8,10 +9,14 @@ const PokemonCard = ({pokemon}) => {
   }
 
   return (
-    <div className="pokemon-card">
-      <img src={getPokemonSpriteUrl(pokemon)} alt={pokemon.name} ></img>
-      <h2>{pokemon.name}</h2>
-    </div>
+    <>
+      <Link to={`/pokemon?name=${pokemon.name}`}>
+        <div className="pokemon-card">
+          <img src={getPokemonSpriteUrl(pokemon)} alt={pokemon.name} ></img>
+          <h2>{pokemon.name}</h2>
+        </div>
+      </Link>
+    </>
   );
 };
 
